@@ -23,15 +23,6 @@ class ProjectController extends Controller
         ], 200);
     }
 
-    public function create()
-    {
-        // For API, we don't need to return a view. Instead, provide any validation or data.
-        return response()->json([
-            'success' => true,
-            'message' => 'Ready to create a new project.',
-        ], 200);
-    }
-
     public function store(ProjectRequest $request)
     {
         if ($request->id) {
